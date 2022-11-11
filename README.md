@@ -13,6 +13,8 @@
 [![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat)](https://pkg.go.dev/github.com/nikoksr/doppler-go)
 </div>
 
+&nbsp;
+
 ## About <a id="about"></a>
 
 doppler-go is a Go client for the [Doppler](https://www.doppler.com/) API. It provides a simple and easy to use interface for interacting with the [Doppler API](https://docs.doppler.com/reference/api).
@@ -24,6 +26,21 @@ This project is currently in an early stage of development. I have not yet confi
 I plan to support this project for the foreseeable future. However, I cannot guarantee that I will be able to fix bugs or add new features in a timely manner.
 
 If you find any bugs or have any suggestions, please open an issue or a pull request.
+
+## Features <a id="features"></a>
+
+* Doppler REST API v3:
+  * Audit
+  * Auth
+  * Configs
+  * Config Logs
+  * Dynamic Secrets
+  * Environments
+  * Projects
+  * Secrets
+  * Service Tokens
+  * Token Sharing
+  * Workplaces
 
 ## Install <a id="install"></a>
 
