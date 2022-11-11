@@ -4,7 +4,7 @@
 
 <p><i>A Go client for the <a href="https://www.doppler.com/">Doppler </a>  API.</i></p>
 
-[![codecov](https://codecov.io/gh/nikoksr/doppler-go/branch/main/graph/badge.svg?token=NY51VEB9GZ)](https://codecov.io/gh/nikoksr/doppler-go)
+[![codecov](https://codecov.io/gh/nikoksr/doppler-go/branch/main/graph/badge.svg?token=9KTRRRWM5A)](https://codecov.io/gh/nikoksr/doppler-go)
 [![Go Report Card](https://goreportcard.com/badge/github.com/nikoksr/doppler-go)](https://goreportcard.com/report/github.com/nikoksr/doppler-go)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/ff90807c42154df9b12a5f03d30a7160)](https://www.codacy.com/gh/nikoksr/doppler-go/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=nikoksr/doppler-go&amp;utm_campaign=Badge_Grade)
 [![Maintainability](https://api.codeclimate.com/v1/badges/8d58f3077a2b6ee2ac57/maintainability)](https://codeclimate.com/github/nikoksr/doppler-go/maintainability)
