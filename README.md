@@ -1,8 +1,10 @@
 <div align="center">
 
+&nbsp;
 <h1>doppler-go</h1>
-
 <p><i>A Go client for the <a href="https://www.doppler.com/">Doppler </a>  API.</i></p>
+
+&nbsp;
 
 [![codecov](https://codecov.io/gh/nikoksr/doppler-go/branch/main/graph/badge.svg?token=9KTRRRWM5A)](https://codecov.io/gh/nikoksr/doppler-go)
 [![Go Report Card](https://goreportcard.com/badge/github.com/nikoksr/doppler-go)](https://goreportcard.com/report/github.com/nikoksr/doppler-go)
@@ -10,8 +12,6 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/8d58f3077a2b6ee2ac57/maintainability)](https://codeclimate.com/github/nikoksr/doppler-go/maintainability)
 [![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat)](https://pkg.go.dev/github.com/nikoksr/doppler-go)
 </div>
-
-<h1></h1>
 
 ## About <a id="about"></a>
 
