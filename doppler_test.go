@@ -63,9 +63,8 @@ func TestAppInfo_formatUserAgent(t *testing.T) {
 	}
 }
 
+//nolint:paralleltest // This test is not parallel because it accesses global state.
 func TestSetAppInfo(t *testing.T) {
-	t.Parallel()
-
 	type args struct {
 		info *AppInfo
 	}
