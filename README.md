@@ -18,6 +18,8 @@
 
 doppler-go is a Go client for the [Doppler](https://www.doppler.com/) API. It provides a simple and easy to use interface for interacting with the [Doppler API](https://docs.doppler.com/reference/api).
 
+The base design is heavily inspired by the [Stripe Go client](https://github.com/stripe/stripe-go), yet there are still some distinct differences.
+
 ## Stability <a id="stability"></a>
 
 This project is currently in an early stage of development. I have not yet confirmed the functionality of all endpoints through extensive end-to-end testing. Therefore, I cannot guarantee for any stability or correctness.
