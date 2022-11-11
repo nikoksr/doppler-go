@@ -66,7 +66,7 @@ func main() {
 
 ## Contributing <a id="contributing"></a>
 
-Yes, please! Contributions of all kinds are very welcome! Feel free to check
+Contributions of all kinds are very welcome! Feel free to check
 our [open issues](https://github.com/nikoksr/doppler-go/issues). Please also take a look at
 the [contribution guidelines](https://github.com/nikoksr/doppler-go/blob/main/CONTRIBUTING.md).
 
