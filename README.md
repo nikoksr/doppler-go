@@ -18,7 +18,6 @@
 
 doppler-go is a Go client for the [Doppler](https://www.doppler.com/) API. It provides a simple and easy to use interface for interacting with the [Doppler API](https://docs.doppler.com/reference/api).
 
-&nbsp;
 ## Stability <a id="stability"></a>
 
 This project is currently in an early stage of development. I have not yet confirmed the functionality of all endpoints through extensive end-to-end testing. Therefore, I cannot guarantee for any stability or correctness.
@@ -27,7 +26,6 @@ I plan to support this project for the foreseeable future. However, I cannot gua
 
 If you find any bugs or have any suggestions, please open an issue or a pull request.
 
-&nbsp;
 ## Features <a id="features"></a>
 
 * Doppler REST API v3:
@@ -43,14 +41,12 @@ If you find any bugs or have any suggestions, please open an issue or a pull req
   * Token Sharing
   * Workplaces
 
-&nbsp;
 ## Install <a id="install"></a>
 
 ```sh
 go get -u github.com/nikoksr/doppler-go
 ```
 
-&nbsp;
 ## Example usage <a id="usage"></a>
 
 ```go
@@ -84,14 +80,12 @@ func main() {
 }
 ```
 
-&nbsp;
 ## Contributing <a id="contributing"></a>
 
 Contributions of all kinds are very welcome! Feel free to check
 our [open issues](https://github.com/nikoksr/doppler-go/issues). Please also take a look at
 the [contribution guidelines](https://github.com/nikoksr/doppler-go/blob/main/CONTRIBUTING.md).
 
-&nbsp;
 ## Show your support <a id="support"></a>
 
 Please give a ⭐️ if you like this project! This helps us to get more visibility and helps other people to find this
