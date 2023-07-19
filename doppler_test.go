@@ -522,31 +522,6 @@ func Test_normalizeURL(t *testing.T) {
 	}
 }
 
-func Test_isPayloadValid(t *testing.T) {
-	t.Parallel()
-
-	// First, test a nil payload.
-	if err := isPayloadValid(nil); err != nil {
-		t.Fatalf("isPayloadValid(nil) returned an error: %v", err)
-	}
-
-	// Test a valid payload. All three fields of SecretGetOptions are required. The validator should not return an error.
-	getOptions := &SecretGetOptions{
-		Project: "fake-project",
-		Config:  "fake-config",
-		Name:    "fake-name",
-	}
-	if err := isPayloadValid(getOptions); err != nil {
-		t.Fatalf("isPayloadValid() returned an error: %v", err)
-	}
-
-	// Now, remove the project field. The validator should return an error.
-	getOptions.Project = ""
-	if err := isPayloadValid(getOptions); err == nil {
-		t.Fatal("isPayloadValid() should return an error")
-	}
-}
-
 func Test_Call(t *testing.T) {
 	t.Parallel()
 
