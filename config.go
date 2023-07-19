@@ -25,8 +25,8 @@ type (
 
 	// ConfigGetOptions represents the options for the config get endpoint.
 	ConfigGetOptions struct {
-		Project string `url:"project" json:"-" validate:"required"` // Identifier of the project that the config belongs to.
-		Config  string `url:"config" json:"-" validate:"required"`  // Name of the config.
+		Project string `url:"project" json:"-"` // Identifier of the project that the config belongs to.
+		Config  string `url:"config" json:"-"`  // Name of the config.
 	}
 
 	// ConfigListResponse represents a response from the config list endpoint.
@@ -42,7 +42,7 @@ type (
 	// ConfigListOptions represents the query parameters for a config list request.
 	ConfigListOptions struct {
 		ListOptions `url:",inline" json:"-"`
-		Project     string `url:"project" json:"-" validate:"required"` // Identifier of the project that the config belongs to.
+		Project     string `url:"project" json:"-"` // Identifier of the project that the config belongs to.
 	}
 
 	// ConfigCreateResponse represents a response from the config create endpoint.
@@ -57,9 +57,9 @@ type (
 
 	// ConfigCreateOptions represents the body parameters for a config create request.
 	ConfigCreateOptions struct {
-		Project     string `url:"-" json:"project" validate:"required"`     // Identifier of the project that the config belongs to.
-		Environment string `url:"-" json:"environment" validate:"required"` // Identifier of the environment that the config belongs to.
-		Name        string `url:"-" json:"name" validate:"required"`        // Name of the new branch configuration.
+		Project     string `url:"-" json:"project"`     // Identifier of the project that the config belongs to.
+		Environment string `url:"-" json:"environment"` // Identifier of the environment that the config belongs to.
+		Name        string `url:"-" json:"name"`        // Name of the new branch configuration.
 	}
 
 	// ConfigUpdateResponse represents a doppler config update request.
@@ -74,9 +74,9 @@ type (
 
 	// ConfigUpdateOptions represents the body parameters for a config update request.
 	ConfigUpdateOptions struct {
-		Project string `url:"-" json:"project" validate:"required"` // Identifier of the project that the config belongs to.
-		Config  string `url:"-" json:"config" validate:"required"`  // Name of the config.
-		NewName string `url:"-" json:"name" validate:"required"`    // New name of the config.
+		Project string `url:"-" json:"project"` // Identifier of the project that the config belongs to.
+		Config  string `url:"-" json:"config"`  // Name of the config.
+		NewName string `url:"-" json:"name"`    // New name of the config.
 	}
 
 	// ConfigDeleteResponse represents a response from the config delete endpoint.
@@ -90,8 +90,8 @@ type (
 
 	// ConfigDeleteOptions represents the body parameters for a config delete request.
 	ConfigDeleteOptions struct {
-		Project string `url:"-" json:"project" validate:"required"` // Identifier of the project that the config belongs to.
-		Config  string `url:"-" json:"config" validate:"required"`  // Name of the config.
+		Project string `url:"-" json:"project"` // Identifier of the project that the config belongs to.
+		Config  string `url:"-" json:"config"`  // Name of the config.
 	}
 
 	// ConfigLockResponse represents a response from the config lock endpoint.
@@ -106,8 +106,8 @@ type (
 
 	// ConfigLockOptions represents the body parameters for a config lock request.
 	ConfigLockOptions struct {
-		Project string `url:"-" json:"project" validate:"required"` // Identifier of the project that the config belongs to.
-		Config  string `url:"-" json:"config" validate:"required"`  // Name of the config.
+		Project string `url:"-" json:"project"` // Identifier of the project that the config belongs to.
+		Config  string `url:"-" json:"config"`  // Name of the config.
 	}
 
 	// ConfigUnlockResponse represents a response from the config unlock endpoint.
@@ -122,8 +122,8 @@ type (
 
 	// ConfigUnlockOptions represents the body parameters for a config unlock request.
 	ConfigUnlockOptions struct {
-		Project string `url:"-" json:"project" validate:"required"` // Identifier of the project that the config belongs to.
-		Config  string `url:"-" json:"config" validate:"required"`  // Name of the config.
+		Project string `url:"-" json:"project"` // Identifier of the project that the config belongs to.
+		Config  string `url:"-" json:"config"`  // Name of the config.
 	}
 
 	// ConfigCloneResponse represents a response from the config clone endpoint.
@@ -138,8 +138,8 @@ type (
 
 	// ConfigCloneOptions represents the body parameters for a config clone request.
 	ConfigCloneOptions struct {
-		Project   string `url:"-" json:"project" validate:"required"` // Identifier of the project that the config belongs to.
-		Config    string `url:"-" json:"config" validate:"required"`  // Name of the config.
-		NewConfig string `url:"-" json:"name" validate:"required"`    // Name of the new config.
+		Project   string `url:"-" json:"project"` // Identifier of the project that the config belongs to.
+		Config    string `url:"-" json:"config"`  // Name of the config.
+		NewConfig string `url:"-" json:"name"`    // Name of the new config.
 	}
 )

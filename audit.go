@@ -45,7 +45,7 @@ type (
 
 	// AuditWorkplaceUserGetOptions represents options for the audit workplace user get endpoint.
 	AuditWorkplaceUserGetOptions struct {
-		UserID   string `url:"-" json:"-" validate:"required"`
+		UserID   string `url:"-" json:"-"`
 		Settings *bool  `url:"settings,omitempty" json:"-"` // If true, the api will return more information if the workplace has e.g. SAML enabled and SCIM enabled.
 	}
 

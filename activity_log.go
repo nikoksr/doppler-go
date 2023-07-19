@@ -25,7 +25,7 @@ type (
 
 	// ActivityLogGetOptions represents the query parameters for an activity log get request.
 	ActivityLogGetOptions struct {
-		ID string `url:"log" json:"-" validate:"required"` // ID is the unique identifier for the log object.
+		ID string `url:"log" json:"-"` // ID is the unique identifier for the log object.
 	}
 
 	// ActivityLogListResponse represents a response from the activity log list endpoint.

@@ -22,7 +22,7 @@ type (
 
 	// AuthRevokeOptions revokes an auth token.
 	AuthRevokeOptions struct {
-		Tokens []AuthToken `url:"-" json:"tokens" validate:"gt=0"` // A list of tokens to revoke.
+		Tokens []AuthToken `url:"-" json:"tokens"` // A list of tokens to revoke.
 	}
 )
 
