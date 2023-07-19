@@ -20,7 +20,7 @@ import (
 
 const (
 	// SDKVersion is the version of the SDK
-	SDKVersion = "0.2.0"
+	SDKVersion = "0.2.1"
 
 	// APIURL is the base URL for the API
 	APIURL string = "https://api.doppler.com"
