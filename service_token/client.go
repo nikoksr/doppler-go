@@ -65,7 +65,7 @@ func Create(ctx context.Context, opts *doppler.ServiceTokenCreateOptions) (*dopp
 	return Default().Create(ctx, opts)
 }
 
-func (c Client) delete(ctx context.Context, opts *doppler.ServiceTokenDeleteOptions) (doppler.APIResponse, error) {
+func (c Client) delete(ctx context.Context, _ *doppler.ServiceTokenDeleteOptions) (doppler.APIResponse, error) {
 	var resp doppler.ServiceTokenDeleteResponse
 	err := c.Backend.Call(ctx, &doppler.Request{
 		Method: http.MethodDelete,
