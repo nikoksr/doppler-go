@@ -23,8 +23,8 @@ type (
 
 	// EnvironmentGetOptions represents the options for the environment get endpoint.
 	EnvironmentGetOptions struct {
-		Project string `url:"project" json:"-" validate:"required"`     // Identifier of the project the environment belongs to.
-		Slug    string `url:"environment" json:"-" validate:"required"` // A unique identifier for the environment.
+		Project string `url:"project" json:"-"`     // Identifier of the project the environment belongs to.
+		Slug    string `url:"environment" json:"-"` // A unique identifier for the environment.
 	}
 
 	// EnvironmentListResponse represents a response from the environment list endpoint.
@@ -39,7 +39,7 @@ type (
 
 	// EnvironmentListOptions represents the query parameters for a environment list request.
 	EnvironmentListOptions struct {
-		Project string `url:"project" json:"-" validate:"required"` // Identifier of the project the environment belongs to.
+		Project string `url:"project" json:"-"` // Identifier of the project the environment belongs to.
 	}
 
 	// EnvironmentCreateResponse represents a response from the environment create endpoint.
@@ -54,9 +54,9 @@ type (
 
 	// EnvironmentCreateOptions represents the body parameters for a environment create request.
 	EnvironmentCreateOptions struct {
-		Project string `url:"project" json:"-" validate:"required"`        // Identifier of the project the environment belongs to.
-		Name    string `url:"-" json:"name,omitempty" validate:"required"` // Name of the environment.
-		Slug    string `url:"-" json:"slug,omitempty" validate:"required"` // A unique identifier for the environment.
+		Project string `url:"project" json:"-"`        // Identifier of the project the environment belongs to.
+		Name    string `url:"-" json:"name,omitempty"` // Name of the environment.
+		Slug    string `url:"-" json:"slug,omitempty"` // A unique identifier for the environment.
 	}
 
 	// EnvironmentRenameResponse represents a doppler environment rename request.
@@ -71,10 +71,10 @@ type (
 
 	// EnvironmentRenameOptions represents the body parameters for a environment rename request.
 	EnvironmentRenameOptions struct {
-		Project string  `url:"project" json:"-" validate:"required"`     // Identifier of the project the environment belongs to.
-		Slug    string  `url:"environment" json:"-" validate:"required"` // A unique identifier for the environment.
-		NewName *string `url:"-" json:"name,omitempty"`                  // New name of the environment.
-		NewSlug *string `url:"-" json:"slug,omitempty"`                  // New slug of the environment.
+		Project string  `url:"project" json:"-"`        // Identifier of the project the environment belongs to.
+		Slug    string  `url:"environment" json:"-"`    // A unique identifier for the environment.
+		NewName *string `url:"-" json:"name,omitempty"` // New name of the environment.
+		NewSlug *string `url:"-" json:"slug,omitempty"` // New slug of the environment.
 	}
 
 	// EnvironmentDeleteResponse represents a response from the environment delete endpoint.
@@ -88,7 +88,7 @@ type (
 
 	// EnvironmentDeleteOptions represents the body parameters for a environment delete request.
 	EnvironmentDeleteOptions struct {
-		Project string `url:"project" json:"-" validate:"required"`     // Identifier of the project the environment belongs to.
-		Slug    string `url:"environment" json:"-" validate:"required"` // A unique identifier for the environment.
+		Project string `url:"project" json:"-"`     // Identifier of the project the environment belongs to.
+		Slug    string `url:"environment" json:"-"` // A unique identifier for the environment.
 	}
 )

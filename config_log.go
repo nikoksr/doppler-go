@@ -33,9 +33,9 @@ type (
 
 	// ConfigLogGetOptions represents the options for the config log get endpoint.
 	ConfigLogGetOptions struct {
-		Project string `url:"project" json:"-" validate:"required"` // Identifier of the project that the config belongs to.
-		Config  string `url:"config" json:"-" validate:"required"`  // Name of the config.
-		ID      string `url:"log" json:"-" validate:"required"`     // Unique identifier of the config log.
+		Project string `url:"project" json:"-"` // Identifier of the project that the config belongs to.
+		Config  string `url:"config" json:"-"`  // Name of the config.
+		ID      string `url:"log" json:"-"`     // Unique identifier of the config log.
 	}
 
 	// ConfigLogListResponse represents a response from the config log list endpoint.
@@ -51,8 +51,8 @@ type (
 	// ConfigLogListOptions represents the query parameters for a config log list request.
 	ConfigLogListOptions struct {
 		ListOptions `url:",inline" json:"-"`
-		Project     string `url:"project" json:"-" validate:"required"` // Identifier of the project that the config belongs to.
-		Config      string `url:"config" json:"-" validate:"required"`  // Name of the config.
+		Project     string `url:"project" json:"-"` // Identifier of the project that the config belongs to.
+		Config      string `url:"config" json:"-"`  // Name of the config.
 	}
 
 	// ConfigLogRollbackResponse represents a response from the config log rollback endpoint.
@@ -67,8 +67,8 @@ type (
 
 	// ConfigLogRollbackOptions represents the options for the config log rollback endpoint.
 	ConfigLogRollbackOptions struct {
-		Project string `url:"project" json:"-" validate:"required"` // Identifier of the project that the config belongs to.
-		Config  string `url:"config" json:"-" validate:"required"`  // Name of the config.
-		ID      string `url:"log" json:"-" validate:"required"`     // Unique identifier of the config log.
+		Project string `url:"project" json:"-"` // Identifier of the project that the config belongs to.
+		Config  string `url:"config" json:"-"`  // Name of the config.
+		ID      string `url:"log" json:"-"`     // Unique identifier of the config log.
 	}
 )

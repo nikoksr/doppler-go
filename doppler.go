@@ -14,8 +14,6 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/go-playground/validator/v10"
-
 	"github.com/nikoksr/doppler-go/logging"
 	"github.com/nikoksr/doppler-go/pointer"
 )
@@ -48,15 +46,6 @@ const (
 
 // Key is the API key used to authenticate with the API
 var Key string
-
-// EnableValidation enables validation of the payload. This is enabled by default. If you want to disable validation,
-// set this to false.
-var EnableValidation = true
-
-// Internal standard logger and validator.
-var (
-	stdValidator = validator.New()
-)
 
 // BackendConfig is the configuration for the backend.
 type BackendConfig struct {
@@ -303,25 +292,9 @@ func (req *Request) getBody() (*bytes.Buffer, error) {
 	return encodedBody, nil
 }
 
-// isPayloadValid uses the go-playground validator to validate the payload. It is expected that the payload is a struct
-// and validation tags are used to define the validation rules. Using this function to make the code more readable.
-// Validation is skipped if EnableValidation is false or the payload is nil.
-func isPayloadValid(payload any) error {
-	if !EnableValidation || payload == nil {
-		return nil
-	}
-
-	return stdValidator.Struct(payload)
-}
-
 // prepareRequest creates a new HTTP request from the given Request. The returned request is ready to be sent to the
 // API.
 func (b *backendImplementation) prepareRequest(ctx context.Context, req *Request) (*http.Request, error) {
-	// Validate the request's payload before we do anything else.
-	if err := isPayloadValid(req.Payload); err != nil {
-		return nil, errors.Wrap(err, "validate request payload")
-	}
-
 	// Normalize URL
 	if !strings.HasPrefix(req.Path, "/") {
 		req.Path = "/" + req.Path

@@ -12,10 +12,10 @@ type (
 
 	// DynamicSecretIssueLeaseOptions represents the options for the dynamic secret issue lease endpoint.
 	DynamicSecretIssueLeaseOptions struct {
-		Project    string `url:"-" json:"project" validate:"required"`        // The project where the dynamic secret is located
-		Config     string `url:"-" json:"config" validate:"required"`         // The config where the dynamic secret is located
-		Name       string `url:"-" json:"dynamic_secret" validate:"required"` // The dynamic secret to issue a lease for
-		TTLSeconds int32  `url:"-" json:"ttl_seconds" validate:"required"`    // The number of seconds the lease should last
+		Project    string `url:"-" json:"project"`        // The project where the dynamic secret is located
+		Config     string `url:"-" json:"config"`         // The config where the dynamic secret is located
+		Name       string `url:"-" json:"dynamic_secret"` // The dynamic secret to issue a lease for
+		TTLSeconds int32  `url:"-" json:"ttl_seconds"`    // The number of seconds the lease should last
 	}
 
 	// DynamicSecretRevokeLeaseResponse represents a response from the dynamic secret revoke lease endpoint.
@@ -29,9 +29,9 @@ type (
 
 	// DynamicSecretRevokeLeaseOptions represents the options for the dynamic secret revoke lease endpoint.
 	DynamicSecretRevokeLeaseOptions struct {
-		Project string `url:"-" json:"project" validate:"required"`        // The project where the dynamic secret is located
-		Config  string `url:"-" json:"config" validate:"required"`         // The config where the dynamic secret is located
-		Name    string `url:"-" json:"dynamic_secret" validate:"required"` // The dynamic secret to revoke a lease for
-		Slug    string `url:"-" json:"slug" validate:"required"`           // The lease to revoke
+		Project string `url:"-" json:"project"`        // The project where the dynamic secret is located
+		Config  string `url:"-" json:"config"`         // The config where the dynamic secret is located
+		Name    string `url:"-" json:"dynamic_secret"` // The dynamic secret to revoke a lease for
+		Slug    string `url:"-" json:"slug"`           // The lease to revoke
 	}
 )

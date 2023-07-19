@@ -25,9 +25,9 @@ type (
 
 	// SecretGetOptions represents options for the secrets get endpoint.
 	SecretGetOptions struct {
-		Project string `url:"project" json:"-" validate:"required"` // The name of the project containing the secret.
-		Config  string `url:"config" json:"-" validate:"required"`  // The name of the config containing the secret.
-		Name    string `url:"name" json:"-" validate:"required"`    // The name of the secret.
+		Project string `url:"project" json:"-"` // The name of the project containing the secret.
+		Config  string `url:"config" json:"-"`  // The name of the config containing the secret.
+		Name    string `url:"name" json:"-"`    // The name of the secret.
 	}
 
 	// SecretListResponse represents a response from the secrets list endpoint.
@@ -42,8 +42,8 @@ type (
 
 	// SecretListOptions represents options for the secrets list endpoint.
 	SecretListOptions struct {
-		Project           string  `url:"project" json:"-" validate:"required"`       // The name of the project containing the secret.
-		Config            string  `url:"config" json:"-" validate:"required"`        // The name of the config containing the secret.
+		Project           string  `url:"project" json:"-"`                           // The name of the project containing the secret.
+		Config            string  `url:"config" json:"-"`                            // The name of the config containing the secret.
 		IncludeDynamic    *bool   `url:"include_dynamic_secrets,omitempty" json:"-"` // Whether to include dynamic secrets.
 		DynamicTTLSeconds *int32  `url:"dynamic_secrets_ttl_sec,omitempty" json:"-"` // The number of seconds until dynamic leases expire. Must be used with include_dynamic_secrets.
 		Secrets           *string `url:"secrets,omitempty" json:"-"`                 // A comma-separated list of secret names to include.
@@ -61,9 +61,9 @@ type (
 
 	// SecretUpdateOptions represents options for the secrets update endpoint.
 	SecretUpdateOptions struct {
-		Project    string            `url:"-" json:"project" validate:"required"`           // The name of the project containing the secret.
-		Config     string            `url:"-" json:"config" validate:"required"`            // The name of the config containing the secret.
-		NewSecrets map[string]string `url:"-" json:"secrets" validate:"gt=0,dive,required"` // The secrets to update.
+		Project    string            `url:"-" json:"project"` // The name of the project containing the secret.
+		Config     string            `url:"-" json:"config"`  // The name of the config containing the secret.
+		NewSecrets map[string]string `url:"-" json:"secrets"` // The secrets to update.
 	}
 
 	// SecretDownloadOptions represents options for the secrets download endpoint.
@@ -72,8 +72,8 @@ type (
 	// Endpoint: https://api.doppler.com/v3/configs/config/secrets/download
 	// Docs:     https://docs.doppler.com/reference/config-secret-download
 	SecretDownloadOptions struct {
-		Project           string  `url:"project" json:"-" validate:"required"`       // The name of the project containing the secret.
-		Config            string  `url:"config" json:"-" validate:"required"`        // The name of the config containing the secret.
+		Project           string  `url:"project" json:"-"`                           // The name of the project containing the secret.
+		Config            string  `url:"config" json:"-"`                            // The name of the config containing the secret.
 		IncludeDynamic    *bool   `url:"include_dynamic_secrets,omitempty" json:"-"` // Whether to include dynamic secrets.
 		DynamicTTLSeconds *int32  `url:"dynamic_secrets_ttl_sec,omitempty" json:"-"` // The number of seconds until dynamic leases expire. Must be used with include_dynamic_secrets.
 		Format            *string `url:"format,omitempty" json:"-"`                  // The format to download the secrets in. See official docs for supported formats.

@@ -26,8 +26,8 @@ type (
 
 	// ServiceTokenListOptions represents the options for the service-token list endpoint.
 	ServiceTokenListOptions struct {
-		Project string `url:"project,omitempty" json:"-" validate:"required"` // Unique identifier for the project object.
-		Config  string `url:"config,omitempty" json:"-" validate:"required"`  // The config's name.
+		Project string `url:"project,omitempty" json:"-"` // Unique identifier for the project object.
+		Config  string `url:"config,omitempty" json:"-"`  // The config's name.
 	}
 
 	// ServiceTokenCreateResponse represents a response from the service-token create endpoint.
@@ -42,11 +42,11 @@ type (
 
 	// ServiceTokenCreateOptions represents the options for the service-token create endpoint.
 	ServiceTokenCreateOptions struct {
-		Project   string  `url:"-" json:"project,omitempty" validate:"required"` // Unique identifier for the project object.
-		Config    string  `url:"-" json:"config,omitempty" validate:"required"`  // The config's name.
-		Name      string  `url:"-" json:"name,omitempty" validate:"required"`    // Name of the service token.
-		Access    *string `url:"-" json:"access,omitempty"`                      // The access level of the service token. One of read, read/write.
-		ExpiresAt *string `url:"-" json:"expires_at,omitempty"`                  // Date and time of the token's expiration, or null if token does not auto-expire.
+		Project   string  `url:"-" json:"project,omitempty"`    // Unique identifier for the project object.
+		Config    string  `url:"-" json:"config,omitempty"`     // The config's name.
+		Name      string  `url:"-" json:"name,omitempty"`       // Name of the service token.
+		Access    *string `url:"-" json:"access,omitempty"`     // The access level of the service token. One of read, read/write.
+		ExpiresAt *string `url:"-" json:"expires_at,omitempty"` // Date and time of the token's expiration, or null if token does not auto-expire.
 	}
 
 	// ServiceTokenDeleteResponse represents a response from the service-token delete endpoint.
@@ -60,8 +60,8 @@ type (
 
 	// ServiceTokenDeleteOptions represents the options for the service-token delete endpoint.
 	ServiceTokenDeleteOptions struct {
-		Project string `url:"-" json:"project,omitempty" validate:"required"` // Unique identifier for the project object.
-		Config  string `url:"-" json:"config,omitempty" validate:"required"`  // The config's name.
-		Slug    string `url:"-" json:"slug,omitempty" validate:"required"`    // A unique identifier of the service token.
+		Project string `url:"-" json:"project,omitempty"` // Unique identifier for the project object.
+		Config  string `url:"-" json:"config,omitempty"`  // The config's name.
+		Slug    string `url:"-" json:"slug,omitempty"`    // A unique identifier of the service token.
 	}
 )

@@ -25,9 +25,9 @@ type (
 
 	// SharePlainOptions represents the options for the share plain endpoint.
 	SharePlainOptions struct {
-		Secret      string `url:"-" json:"secret" validate:"required"` // Plain text secret to share.
-		ExpireViews *int32 `url:"-" json:"expire_views,omitempty"`     // Number of views before the link expires. Valid ranges: 1 to 50. -1 for unlimited.
-		ExpireDays  *int32 `url:"-" json:"expire_days,omitempty"`      // Number of days before the link expires. Valid range: 1 to 90.
+		Secret      string `url:"-" json:"secret"`                 // Plain text secret to share.
+		ExpireViews *int32 `url:"-" json:"expire_views,omitempty"` // Number of views before the link expires. Valid ranges: 1 to 50. -1 for unlimited.
+		ExpireDays  *int32 `url:"-" json:"expire_days,omitempty"`  // Number of days before the link expires. Valid range: 1 to 90.
 	}
 
 	// ShareEncryptedResponse represents a response from the share encrypted endpoint.
@@ -42,12 +42,12 @@ type (
 
 	// ShareEncryptedOptions represents the options for the share encrypted endpoint.
 	ShareEncryptedOptions struct {
-		Secret      string `url:"-" json:"encrypted_secret" validate:"required"`                 // Base64 encoded AES-GCM encrypted secret to share. See docs for more details.
-		Password    string `url:"-" json:"hashed_password" validate:"required"`                  // SHA256 hash of the password. This is NOT the hash of the derived encryption key.
-		KDF         string `url:"-" json:"encryption_kdf" validate:"required,eq=pbkdf2"`         // The key derivation function used. Must by "pbkdf2".
-		SaltRounds  int32  `url:"-" json:"encryption_salt_rounds" validate:"required,eq=100000"` // Number of salt rounds used by KDF. Must be "100000".
-		ExpireViews *int32 `url:"-" json:"expire_views,omitempty"`                               // Number of views before the link expires. Valid ranges: 1 to 50. -1 for unlimited.
-		ExpireDays  *int32 `url:"-" json:"expire_days,omitempty"`                                // Number of days before the link expires. Valid range: 1 to 90.
+		Secret      string `url:"-" json:"encrypted_secret"`       // Base64 encoded AES-GCM encrypted secret to share. See docs for more details.
+		Password    string `url:"-" json:"hashed_password"`        // SHA256 hash of the password. This is NOT the hash of the derived encryption key.
+		KDF         string `url:"-" json:"encryption_kdf"`         // The key derivation function used. Must by "pbkdf2".
+		SaltRounds  int32  `url:"-" json:"encryption_salt_rounds"` // Number of salt rounds used by KDF. Must be "100000".
+		ExpireViews *int32 `url:"-" json:"expire_views,omitempty"` // Number of views before the link expires. Valid ranges: 1 to 50. -1 for unlimited.
+		ExpireDays  *int32 `url:"-" json:"expire_days,omitempty"`  // Number of days before the link expires. Valid range: 1 to 90.
 	}
 )
 

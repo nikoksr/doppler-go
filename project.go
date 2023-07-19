@@ -22,7 +22,7 @@ type (
 
 	// ProjectGetOptions represents the options for the project get endpoint.
 	ProjectGetOptions struct {
-		Name string `url:"project" json:"-" validate:"required"` // Name is the name of the project.
+		Name string `url:"project" json:"-"` // Name is the name of the project.
 	}
 
 	// ProjectListResponse represents a response from the project list endpoint.
@@ -52,8 +52,8 @@ type (
 
 	// ProjectCreateOptions represents the body parameters for a project create request.
 	ProjectCreateOptions struct {
-		Name        string  `url:"-" json:"name" validate:"required"` // Name of the project.
-		Description *string `url:"-" json:"description,omitempty"`    // Description of the project.
+		Name        string  `url:"-" json:"name"`                  // Name of the project.
+		Description *string `url:"-" json:"description,omitempty"` // Description of the project.
 	}
 
 	// ProjectUpdateResponse represents a doppler project update request.
@@ -68,9 +68,9 @@ type (
 
 	// ProjectUpdateOptions represents the body parameters for a project update request.
 	ProjectUpdateOptions struct {
-		Name           string  `url:"-" json:"project" validate:"required"`        // Name of the project.
-		NewName        string  `url:"-" json:"name,omitempty" validate:"required"` // New name of the project.
-		NewDescription *string `url:"-" json:"description,omitempty"`              // New description of the project.
+		Name           string  `url:"-" json:"project"`               // Name of the project.
+		NewName        string  `url:"-" json:"name,omitempty"`        // New name of the project.
+		NewDescription *string `url:"-" json:"description,omitempty"` // New description of the project.
 	}
 
 	// ProjectDeleteResponse represents a response from the project delete endpoint.
@@ -84,6 +84,6 @@ type (
 
 	// ProjectDeleteOptions represents the body parameters for a project delete request.
 	ProjectDeleteOptions struct {
-		Name string `url:"-" json:"project" validate:"required"` // Name of the project.
+		Name string `url:"-" json:"project"` // Name of the project.
 	}
 )
