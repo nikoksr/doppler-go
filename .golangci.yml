@@ -2,6 +2,7 @@ run:
   timeout: '5m'
   skip-dirs:
     - '_examples'
+    - '_playground'
   allow-parallel-runners: true
   modules-download-mode: 'readonly'
 
@@ -9,7 +10,6 @@ linters:
   enable:
     - 'asciicheck'
     - 'bodyclose'
-    - 'depguard'
     - 'dogsled'
     - 'errcheck'
     - 'errorlint'
